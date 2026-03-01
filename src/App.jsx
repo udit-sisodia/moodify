@@ -1,4 +1,4 @@
-import './App.css'
+// import './App.css'
 import FacialExpressionReader from './features/Expression/components/FaceExpressionReader'
 
 function App() {
