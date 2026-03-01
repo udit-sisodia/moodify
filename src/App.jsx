@@ -1,10 +1,10 @@
 // import './App.css'
-import FacialExpressionReader from './features/Expression/components/FaceExpressionReader'
+import FaceExpression from './features/Expression/components/FaceExpression'
 
 function App() {
 
   return (
-   <FacialExpressionReader/>
+   <FaceExpression/>
   )
 }
 
