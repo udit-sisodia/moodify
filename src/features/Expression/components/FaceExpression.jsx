@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { init, classifyEmotion } from "../utils/util";
 
 export default function FaceExpression() {
-    const videoRef = useRef(null);
-    const landmarkerRef = useRef(null);
-    const streamRef = useRef(null);
+    const videoRef = useRef(null)
+    const landmarkerRef = useRef(null)
+    const streamRef = useRef(null)
     const rafRef = useRef(null);
 
     const [expression, setExpression] = useState("");
