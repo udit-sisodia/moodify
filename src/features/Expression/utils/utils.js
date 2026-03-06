@@ -41,12 +41,12 @@ export const detect = ({ landmarkerRef, videoRef, setExpression }) => {
         const getScore = (name) =>
             blendshapes.find((b) => b.categoryName === name)?.score || 0;
 
-        const smileLeft =  getScore("mouthSmileLeft");
-        const smileRight = getScore("mouthSmileRight");
-        const jawOpen =  getScore("jawOpen");
-        const browUp =  getScore("browInnerUp");
-        const frownLeft = getScore("mouthFrownLeft");
-        const frownRight = getScore("mouthFrownRight");
+        const smileLeft = getScore("mouthSmileLeft");
+        const smileRight =getScore("mouthSmileRight");
+        const jawOpen =getScore("jawOpen");
+        const browUp =getScore("browInnerUp");
+        const frownLeft =getScore("mouthFrownLeft");
+        const frownRight =getScore("mouthFrownRight");
 
         console.log(getScore("mouthFrownLeft"))
 
