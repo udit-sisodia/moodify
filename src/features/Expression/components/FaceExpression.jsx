@@ -18,7 +18,7 @@ export default function FaceExpression() {
             }
 
             if (videoRef.current?.srcObject) {
-                videoRef.current.srcObject
+                 videoRef.current.srcObject
                     .getTracks()
                     .forEach((track) => track.stop());
             }
@@ -26,14 +26,14 @@ export default function FaceExpression() {
     }, []);
 
     return (
-        <div style={{ textAlign: "center" }}>
+        <div  style={{ textAlign: "center" }}>
             <video
                 ref={videoRef}
-                style={{ width: "400px", borderRadius: "12px" }}
-                playsInline
+                 style={{ width: "400px", borderRadius: "12px" }}
+                 playsInline
             />
             <h2>{expression}</h2>
-            <button onClick={()=>{detect({landmarkerRef,videoRef,setExpression})}} >Detect expression</button>
+             <button onClick={()=>{detect({landmarkerRef,videoRef,setExpression})}} >Detect expression</button>
         </div>
     );
 }
