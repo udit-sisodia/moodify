@@ -28,7 +28,7 @@ export const init = async ({ landmarkerRef, videoRef, streamRef }) => {
 };
 
 export const detect = ({ landmarkerRef, videoRef, setExpression }) => {
-    if (!landmarkerRef.current || !videoRef.current) return;
+    if (!landmarkerRef.current || !videoRef.current ) return;
 
     const results = landmarkerRef.current.detectForVideo(
         videoRef.current,
@@ -36,15 +36,15 @@ export const detect = ({ landmarkerRef, videoRef, setExpression }) => {
     );
 
     if (results.faceBlendshapes?.length > 0) {
-        const blendshapes = results.faceBlendshapes[ 0 ].categories;
+        const blendshapes =  results.faceBlendshapes[ 0 ].categories;
 
         const getScore = (name) =>
             blendshapes.find((b) => b.categoryName === name)?.score || 0;
 
-        const smileLeft = getScore("mouthSmileLeft");
+        const smileLeft =  getScore("mouthSmileLeft");
         const smileRight = getScore("mouthSmileRight");
-        const jawOpen = getScore("jawOpen");
-        const browUp = getScore("browInnerUp");
+        const jawOpen =  getScore("jawOpen");
+        const browUp =  getScore("browInnerUp");
         const frownLeft = getScore("mouthFrownLeft");
         const frownRight = getScore("mouthFrownRight");
 
