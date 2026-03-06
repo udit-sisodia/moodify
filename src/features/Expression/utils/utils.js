@@ -41,23 +41,23 @@ export const detect = ({ landmarkerRef, videoRef, setExpression }) => {
         const getScore = (name) =>
             blendshapes.find((b) => b.categoryName === name)?.score || 0;
 
-        const smileLeft = getScore("mouthSmileLeft");
-        const smileRight =getScore("mouthSmileRight");
-        const jawOpen =getScore("jawOpen");
-        const browUp =getScore("browInnerUp");
-        const frownLeft =getScore("mouthFrownLeft");
-        const frownRight =getScore("mouthFrownRight");
+        const  smileLeft = getScore("mouthSmileLeft");
+        const  smileRight =getScore("mouthSmileRight");
+        const  jawOpen =getScore("jawOpen");
+        const  browUp =getScore("browInnerUp");
+        const  frownLeft =getScore("mouthFrownLeft");
+        const  frownRight =getScore("mouthFrownRight");
 
-        console.log(getScore("mouthFrownLeft"))
+         console.log(getScore("mouthFrownLeft"))
 
-        let currentExpression = "Neutral";
+        let currentExpression =  "Neutral";
 
         if (smileLeft > 0.5 && smileRight > 0.5) {
             currentExpression = "Happy 😄";
         } else if (jawOpen > 0.2 && browUp > 0.2) {
-            currentExpression = "Surprised 😲";
+            currentExpression =  "Surprised 😲";
         } else if (frownLeft > 0.0001 && frownRight > 0.0001) {
-            currentExpression = "Sad 😢";
+            currentExpression =  "Sad 😢";
         }
 
         setExpression(currentExpression);
