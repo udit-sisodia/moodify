@@ -8,7 +8,7 @@ export default function FaceExpression() {
     const streamRef = useRef(null);
 
     const [ expression, setExpression ] = useState("Detecting...");
-    
+
 
     useEffect(() => {
         init({landmarkerRef,videoRef,streamRef});
