@@ -7,7 +7,7 @@ export default function FaceExpression() {
     const landmarkerRef = useRef(null);
     const streamRef = useRef(null);
 
-    const [ expression, setExpression ] = useState("Detecting...");
+    const [ expression, setExpression ] = useState("Detecting...");  
 
 
     useEffect(() => {
@@ -29,7 +29,7 @@ export default function FaceExpression() {
     return (
         <div  style={{ textAlign: "center" }}>
             <video
-                ref={videoRef}
+                 ref={videoRef}
                  style={{ width: "400px", borderRadius: "12px" }}
                  playsInline
             />
