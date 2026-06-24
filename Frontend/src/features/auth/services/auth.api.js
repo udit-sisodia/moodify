@@ -8,7 +8,7 @@ const api=axios.create({
 export async function register({username,email,password}){
 
     const response=await api.post("api/auth/register",{
-        username,password,email
+        username,email,password
     })
     return response.data;
 }
@@ -32,3 +32,5 @@ export async function logout(){
     const response =await api.post("api/auth/logout")
     return response.data;
 }
+
+
